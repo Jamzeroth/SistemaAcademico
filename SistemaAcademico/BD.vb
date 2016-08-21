@@ -72,4 +72,13 @@ Module BD
         End Try
     End Function
 
+    Public Function Login()
+        Try
+            Dim Ejecuta As New MySql.Data.MySqlClient.MySqlCommand(BDcadena, BDconexion)
+            Ejecuta.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Function
+
 End Module

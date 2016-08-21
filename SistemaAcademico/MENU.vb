@@ -14,29 +14,45 @@ Public Class uno
         BDcadena = ""
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim cm As New MySqlCommand
-        Dim dr As MySqlDataReader
+        BDcadena = "SELECT sisaca.estudiante.Tipo FROM sisaca.usuario WHERE usuario = '" & user.Text & "' and contrasenia = '" & contraseña.Text & "'"
 
-        cm.CommandText = "SELECT usuario, contraseña FROM usuario WHERE usuario = '" & user.Text & "' and contraseña = '" & contraseña.Text & "'"
-        'If dr.HasRows Then
+        'dr = cm.ExecuteReader
+
+        Login()
+        'If dr.HasRows = True Then
+        'While dr.Read
+        'valor = dr.GetValue(0)
+        'MsgBox(valor)
+        'End While
+        'dr.NextResult()
+        'Select Case (valor)
+        'Case 1
         'Me.Hide()
         'Administrativo.Show()
+        'Case 2
+        'Me.Hide()
+        'ConsultarNotas.Show()
+        'Case 3
+        'Me.Hide()
+        'Notas.Show()
+        'End Select
         'Else
+
         'MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
         'End If
 
-        If (user.Text = "hola") And (contraseña.Text = "123") Then
-            Me.Hide()
-            Administrativo.Show()
-        ElseIf (user.Text = "Alumno") And (contraseña.Text = "Alumno1") Then
-            Me.Hide()
-            ConsultarNotas.Show()
-        ElseIf (user.Text = "Profesor") And (contraseña.Text = "Profesor1") Then
-            Me.Hide()
-            Notas.Show()
-        Else
-            MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
-        End If
+        'If (user.Text = "hola") And (contraseña.Text = "123") Then
+        'Me.Hide()
+        'Administrativo.Show()
+        'ElseIf (user.Text = "Alumno") And (contraseña.Text = "Alumno1") Then
+        'Me.Hide()
+        'ConsultarNotas.Show()
+        'ElseIf (user.Text = "Profesor") And (contraseña.Text = "Profesor1") Then
+        'Me.Hide()
+        'Notas.Show()
+        'Else
+        'MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
+        'End If
         user.Text = ""
         contraseña.Text = ""
     End Sub
