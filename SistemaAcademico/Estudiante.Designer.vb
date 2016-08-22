@@ -89,7 +89,7 @@ Partial Class Estudiante
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(626, 325)
+        Me.TabPage1.Size = New System.Drawing.Size(481, 325)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "INGRESAR"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class Estudiante
         Me.fnEst.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.fnEst.Location = New System.Drawing.Point(169, 112)
         Me.fnEst.Name = "fnEst"
-        Me.fnEst.Size = New System.Drawing.Size(98, 20)
+        Me.fnEst.Size = New System.Drawing.Size(121, 20)
         Me.fnEst.TabIndex = 3
         '
         'GuardarBtn

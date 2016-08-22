@@ -73,4 +73,17 @@
             MsgBox("Sólo Letras", MsgBoxStyle.Information)
         End If
     End Sub
+    Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
+
+    End Sub
+
+    Private Sub Limpiar()
+        nomAu.Text = ""
+        Caula.Text = ""
+        bloAu.Text = ""
+        pisoAu.Text = ""
+        dimAu.Text = ""
+        mesasAu.Text = ""
+        siAu.Text = ""
+    End Sub
 End Class

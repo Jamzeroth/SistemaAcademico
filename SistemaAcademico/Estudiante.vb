@@ -79,8 +79,4 @@
         emailEst.Text = ""
         carrera.Text = "Seleccione especialidad"
     End Sub
-
-    Private Sub buscar_TextChanged(sender As Object, e As EventArgs) Handles buscar.TextChanged
-
-    End Sub
 End Class
