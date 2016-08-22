@@ -48,8 +48,8 @@ Partial Class Profesor
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.bus = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        Me.Consultar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -57,7 +57,7 @@ Partial Class Profesor
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -110,9 +110,10 @@ Partial Class Profesor
         '
         'fnPro
         '
+        Me.fnPro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.fnPro.Location = New System.Drawing.Point(195, 118)
         Me.fnPro.Name = "fnPro"
-        Me.fnPro.Size = New System.Drawing.Size(200, 22)
+        Me.fnPro.Size = New System.Drawing.Size(106, 22)
         Me.fnPro.TabIndex = 3
         '
         'titPro
@@ -263,8 +264,8 @@ Partial Class Profesor
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.Label11)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.TablaDgv)
+        Me.TabPage2.Controls.Add(Me.Consultar)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -285,11 +286,12 @@ Partial Class Profesor
         '
         Me.bus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bus.FormattingEnabled = True
-        Me.bus.Items.AddRange(New Object() {"Cédula", "Código", "Nombre", "Asignatura"})
+        Me.bus.Items.AddRange(New Object() {"Cédula", "Nombre", "Asignatura"})
         Me.bus.Location = New System.Drawing.Point(127, 40)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(121, 24)
+        Me.bus.Size = New System.Drawing.Size(137, 24)
         Me.bus.TabIndex = 1
+        Me.bus.Text = "Seleccione opción"
         '
         'Label11
         '
@@ -301,26 +303,27 @@ Partial Class Profesor
         Me.Label11.TabIndex = 14
         Me.Label11.Text = "Buscar por:"
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(36, 109)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(577, 143)
-        Me.DataGridView1.TabIndex = 10
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Location = New System.Drawing.Point(36, 109)
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.Size = New System.Drawing.Size(577, 143)
+        Me.TablaDgv.TabIndex = 10
         '
-        'Button1
+        'Consultar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(247, 279)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(138, 48)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "CONSULTAR"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Consultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Consultar.Image = CType(resources.GetObject("Consultar.Image"), System.Drawing.Image)
+        Me.Consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Consultar.Location = New System.Drawing.Point(247, 279)
+        Me.Consultar.Name = "Consultar"
+        Me.Consultar.Size = New System.Drawing.Size(138, 48)
+        Me.Consultar.TabIndex = 3
+        Me.Consultar.Text = "CONSULTAR"
+        Me.Consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Consultar.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -378,7 +381,7 @@ Partial Class Profesor
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -405,8 +408,8 @@ Partial Class Profesor
     Friend WithEvents Label2 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TablaDgv As DataGridView
+    Friend WithEvents Consultar As Button
     Friend WithEvents buscar As TextBox
     Friend WithEvents bus As ComboBox
     Friend WithEvents Label11 As Label

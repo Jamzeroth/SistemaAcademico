@@ -85,4 +85,37 @@
             MsgBox("Sólo Letras", MsgBoxStyle.Information)
         End If
     End Sub
+
+    Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
+        BDcadena = "SELECT codigo_pro FROM sisaca.profesor;"
+        Dim cod As Integer = AsignarId("codigo_pro")
+        BDcadena = "INSERT INTO `sisaca`.`profesor` (`codigo_pro`, `Nombre`, `Cédula`, `F. Nacimiento`, `Dirección`, `Teléfono`, `Email`, `Título`, `Sueldo`,`Observaciones`,`Estado`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nompro.Text + "', '" + Cipro.Text + "', '" + CStr(fnPro.Text) + "', '" + dirPro.Text + "', '" + telPro.Text + "', '" + emailPro.Text + "', '" + titPro.Text + "', '" + CStr(sueldo.Text) + "','""','1','0');"
+        Almacenar_Datos()
+        Limpiar()
+    End Sub
+
+    Private Sub Limpiar()
+        Cipro.Text = ""
+        nompro.Text = ""
+        fnPro.Text = Now.ToShortDateString
+        dirPro.Text = ""
+        telPro.Text = ""
+        emailPro.Text = ""
+        titPro.Text = ""
+        sueldo.Text = ""
+    End Sub
+
+    Private Sub Consultar_Click(sender As Object, e As EventArgs) Handles Consultar.Click
+        If (bus.Text <> "Seleccione opción") Then
+            Select Case bus.Text
+                Case "Asignatura"
+                    BDcadena = "SELECT sisaca.estudiante.Nombre FROM sisaca.nota inner join sisaca.asignatura on sisaca.nota.asignatura_codigo_asi=sisaca.asignatura.codigo_asi inner join sisaca.estudiante on sisaca.nota.estudiante_codigo_est=sisaca.estudiante.codigo_est where sisaca.asignatura.Nombre='" + buscar.Text + "';"
+                Case Else
+                    BDcadena = "SELECT " + bus.Text + " FROM sisaca.estudiante WHERE " + bus.Text + "='" + buscar.Text + "';"
+            End Select
+        Else
+            MsgBox("Seleccione un método de búsqueda")
+        End If
+        TablaDgv.DataSource = ObtenerTabla()
+    End Sub
 End Class

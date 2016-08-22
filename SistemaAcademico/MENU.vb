@@ -18,7 +18,7 @@ Public Class uno
 
         'dr = cm.ExecuteReader
 
-        Login()
+        'Login()
         'If dr.HasRows = True Then
         'While dr.Read
         'valor = dr.GetValue(0)
@@ -41,18 +41,18 @@ Public Class uno
         'MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
         'End If
 
-        'If (user.Text = "hola") And (contraseña.Text = "123") Then
-        'Me.Hide()
-        'Administrativo.Show()
-        'ElseIf (user.Text = "Alumno") And (contraseña.Text = "Alumno1") Then
-        'Me.Hide()
-        'ConsultarNotas.Show()
-        'ElseIf (user.Text = "Profesor") And (contraseña.Text = "Profesor1") Then
-        'Me.Hide()
-        'Notas.Show()
-        'Else
-        'MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
-        'End If
+        If (user.Text = "hola") And (contraseña.Text = "123") Then
+            Me.Hide()
+            Administrativo.Show()
+        ElseIf (user.Text = "Alumno") And (contraseña.Text = "Alumno1") Then
+            Me.Hide()
+            ConsultarNotas.Show()
+        ElseIf (user.Text = "Profesor") And (contraseña.Text = "Profesor1") Then
+            Me.Hide()
+            Notas.Show()
+        Else
+            MsgBox("Contraseña/Usuario INCORRECTOS, Vuelva a Ingresar", MsgBoxStyle.Exclamation, "ERROR")
+        End If
         user.Text = ""
         contraseña.Text = ""
     End Sub
