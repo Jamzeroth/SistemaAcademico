@@ -46,7 +46,7 @@ Partial Class Laboratorio
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.bus = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -55,7 +55,7 @@ Partial Class Laboratorio
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -107,10 +107,12 @@ Partial Class Laboratorio
         '
         Me.tipLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tipLab.FormattingEnabled = True
+        Me.tipLab.Items.AddRange(New Object() {"Química", "Física", "Informática", "Anatomía", "Circuitos"})
         Me.tipLab.Location = New System.Drawing.Point(165, 264)
         Me.tipLab.Name = "tipLab"
         Me.tipLab.Size = New System.Drawing.Size(159, 24)
         Me.tipLab.TabIndex = 7
+        Me.tipLab.Text = "Seleccione tipo"
         '
         'Label9
         '
@@ -258,7 +260,7 @@ Partial Class Laboratorio
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.Label11)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.TablaDgv)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
@@ -280,11 +282,12 @@ Partial Class Laboratorio
         '
         Me.bus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bus.FormattingEnabled = True
-        Me.bus.Items.AddRange(New Object() {"Nombre", "Codigo"})
+        Me.bus.Items.AddRange(New Object() {"Nombre", "Bloque", "Piso"})
         Me.bus.Location = New System.Drawing.Point(126, 51)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(121, 24)
+        Me.bus.Size = New System.Drawing.Size(138, 24)
         Me.bus.TabIndex = 1
+        Me.bus.Text = "Seleccione opción"
         '
         'Label11
         '
@@ -296,13 +299,14 @@ Partial Class Laboratorio
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Buscar por:"
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 108)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(577, 143)
-        Me.DataGridView1.TabIndex = 10
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Location = New System.Drawing.Point(27, 108)
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.Size = New System.Drawing.Size(577, 143)
+        Me.TablaDgv.TabIndex = 10
         '
         'Button1
         '
@@ -373,7 +377,7 @@ Partial Class Laboratorio
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -386,7 +390,7 @@ Partial Class Laboratorio
     Friend WithEvents buscar As TextBox
     Friend WithEvents bus As ComboBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TablaDgv As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents tipLab As ComboBox
     Friend WithEvents Label9 As Label

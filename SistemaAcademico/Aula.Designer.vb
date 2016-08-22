@@ -166,7 +166,7 @@ Partial Class Aula
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(42, 212)
+        Me.Label8.Location = New System.Drawing.Point(62, 212)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(122, 16)
         Me.Label8.TabIndex = 40
@@ -176,7 +176,7 @@ Partial Class Aula
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(74, 184)
+        Me.Label7.Location = New System.Drawing.Point(94, 184)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 16)
         Me.Label7.TabIndex = 39
@@ -186,7 +186,7 @@ Partial Class Aula
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(126, 156)
+        Me.Label6.Location = New System.Drawing.Point(146, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(38, 16)
         Me.Label6.TabIndex = 38
@@ -196,7 +196,7 @@ Partial Class Aula
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(110, 128)
+        Me.Label5.Location = New System.Drawing.Point(130, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 16)
         Me.Label5.TabIndex = 37
@@ -206,7 +206,7 @@ Partial Class Aula
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(86, 100)
+        Me.Label4.Location = New System.Drawing.Point(106, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 16)
         Me.Label4.TabIndex = 36
@@ -216,7 +216,7 @@ Partial Class Aula
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 240)
+        Me.Label3.Location = New System.Drawing.Point(70, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(114, 16)
         Me.Label3.TabIndex = 35
@@ -226,7 +226,7 @@ Partial Class Aula
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(96, 72)
+        Me.Label2.Location = New System.Drawing.Point(116, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 16)
         Me.Label2.TabIndex = 34
@@ -261,11 +261,12 @@ Partial Class Aula
         'bus
         '
         Me.bus.FormattingEnabled = True
-        Me.bus.Items.AddRange(New Object() {"Nombre", "Codigo"})
+        Me.bus.Items.AddRange(New Object() {"Nombre", "Bloque", "Piso"})
         Me.bus.Location = New System.Drawing.Point(126, 54)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(121, 24)
+        Me.bus.Size = New System.Drawing.Size(136, 24)
         Me.bus.TabIndex = 12
+        Me.bus.Text = "Seleccione opción"
         '
         'buscar
         '
