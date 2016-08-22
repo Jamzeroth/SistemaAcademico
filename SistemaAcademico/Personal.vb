@@ -60,4 +60,30 @@
             MsgBox("Sólo Numeros", MsgBoxStyle.Information)
         End If
     End Sub
+
+    Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
+        BDcadena = "SELECT codigo_adm FROM sisaca.padministrativo;"
+        Dim cod As Integer = AsignarId("codigo_adm")
+        BDcadena = "INSERT INTO `sisaca`.`padministrativo` (`codigo_adm`, `Nombre`, `Cédula`, `F. Nacimiento`, `Dirección`, `Teléfono`, `Email`, `Cargo`,`estado`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nomPer.Text + "', '" + CiPer.Text + "', '" + CStr(fnPer.Text) + "', '" + dirPer.Text + "', '" + telPer.Text + "', '" + emailPer.Text + "', '" + carPer.Text + "','1','0');"
+        Almacenar_Datos()
+        Limpiar()
+    End Sub
+    Private Sub Limpiar()
+        CiPer.Text = ""
+        nomPer.Text = ""
+        fnPer.Text = Now.ToShortDateString
+        dirPer.Text = ""
+        telPer.Text = ""
+        emailPer.Text = ""
+        carPer.Text = ""
+    End Sub
+
+    Private Sub Consultar_Click(sender As Object, e As EventArgs) Handles Consultar.Click
+        If (bus.Text <> "Seleccione opción") Then
+            BDcadena = "SELECT sisaca.padministrativo.Nombre, sisaca.padministrativo.Cédula FROM sisaca.padministrativo WHERE " + bus.Text + "='" + buscar.Text + "';"
+        Else
+            MsgBox("Seleccione un método de búsqueda")
+        End If
+        TablaDgv.DataSource = ObtenerTabla()
+    End Sub
 End Class

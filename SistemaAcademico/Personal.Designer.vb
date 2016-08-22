@@ -45,17 +45,17 @@ Partial Class Personal
         Me.bus = New System.Windows.Forms.ComboBox()
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        Me.Consultar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -96,15 +96,16 @@ Partial Class Personal
         '
         'fnPer
         '
-        Me.fnPer.Location = New System.Drawing.Point(198, 141)
+        Me.fnPer.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.fnPer.Location = New System.Drawing.Point(163, 141)
         Me.fnPer.Name = "fnPer"
-        Me.fnPer.Size = New System.Drawing.Size(200, 20)
+        Me.fnPer.Size = New System.Drawing.Size(100, 20)
         Me.fnPer.TabIndex = 3
         '
         'carPer
         '
         Me.carPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.carPer.Location = New System.Drawing.Point(197, 257)
+        Me.carPer.Location = New System.Drawing.Point(162, 257)
         Me.carPer.Name = "carPer"
         Me.carPer.Size = New System.Drawing.Size(220, 22)
         Me.carPer.TabIndex = 7
@@ -114,7 +115,7 @@ Partial Class Personal
         Me.guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.guardar.Image = CType(resources.GetObject("guardar.Image"), System.Drawing.Image)
         Me.guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.guardar.Location = New System.Drawing.Point(243, 294)
+        Me.guardar.Location = New System.Drawing.Point(208, 294)
         Me.guardar.Name = "guardar"
         Me.guardar.Size = New System.Drawing.Size(117, 47)
         Me.guardar.TabIndex = 8
@@ -125,7 +126,7 @@ Partial Class Personal
         'nomPer
         '
         Me.nomPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nomPer.Location = New System.Drawing.Point(197, 112)
+        Me.nomPer.Location = New System.Drawing.Point(162, 112)
         Me.nomPer.Name = "nomPer"
         Me.nomPer.Size = New System.Drawing.Size(284, 22)
         Me.nomPer.TabIndex = 2
@@ -133,7 +134,7 @@ Partial Class Personal
         'dirPer
         '
         Me.dirPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dirPer.Location = New System.Drawing.Point(197, 167)
+        Me.dirPer.Location = New System.Drawing.Point(162, 167)
         Me.dirPer.Name = "dirPer"
         Me.dirPer.Size = New System.Drawing.Size(284, 22)
         Me.dirPer.TabIndex = 4
@@ -141,7 +142,7 @@ Partial Class Personal
         'telPer
         '
         Me.telPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.telPer.Location = New System.Drawing.Point(197, 197)
+        Me.telPer.Location = New System.Drawing.Point(162, 197)
         Me.telPer.Name = "telPer"
         Me.telPer.Size = New System.Drawing.Size(121, 22)
         Me.telPer.TabIndex = 5
@@ -149,7 +150,7 @@ Partial Class Personal
         'emailPer
         '
         Me.emailPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.emailPer.Location = New System.Drawing.Point(197, 225)
+        Me.emailPer.Location = New System.Drawing.Point(162, 225)
         Me.emailPer.Name = "emailPer"
         Me.emailPer.Size = New System.Drawing.Size(284, 22)
         Me.emailPer.TabIndex = 6
@@ -157,7 +158,7 @@ Partial Class Personal
         'CiPer
         '
         Me.CiPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CiPer.Location = New System.Drawing.Point(197, 82)
+        Me.CiPer.Location = New System.Drawing.Point(162, 82)
         Me.CiPer.Name = "CiPer"
         Me.CiPer.Size = New System.Drawing.Size(121, 22)
         Me.CiPer.TabIndex = 1
@@ -166,7 +167,7 @@ Partial Class Personal
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(139, 260)
+        Me.Label8.Location = New System.Drawing.Point(104, 260)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 16)
         Me.Label8.TabIndex = 74
@@ -176,7 +177,7 @@ Partial Class Personal
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(139, 228)
+        Me.Label7.Location = New System.Drawing.Point(104, 228)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 16)
         Me.Label7.TabIndex = 73
@@ -186,7 +187,7 @@ Partial Class Personal
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(123, 199)
+        Me.Label6.Location = New System.Drawing.Point(88, 199)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(65, 16)
         Me.Label6.TabIndex = 72
@@ -196,7 +197,7 @@ Partial Class Personal
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(123, 167)
+        Me.Label5.Location = New System.Drawing.Point(88, 167)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 16)
         Me.Label5.TabIndex = 71
@@ -206,7 +207,7 @@ Partial Class Personal
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(71, 141)
+        Me.Label4.Location = New System.Drawing.Point(36, 141)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 16)
         Me.Label4.TabIndex = 70
@@ -216,7 +217,7 @@ Partial Class Personal
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(129, 85)
+        Me.Label3.Location = New System.Drawing.Point(94, 85)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 16)
         Me.Label3.TabIndex = 69
@@ -226,7 +227,7 @@ Partial Class Personal
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(46, 115)
+        Me.Label2.Location = New System.Drawing.Point(11, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(145, 16)
         Me.Label2.TabIndex = 68
@@ -236,7 +237,7 @@ Partial Class Personal
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(240, 36)
+        Me.Label10.Location = New System.Drawing.Point(171, 34)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(154, 16)
         Me.Label10.TabIndex = 67
@@ -247,8 +248,8 @@ Partial Class Personal
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.Label9)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.TablaDgv)
+        Me.TabPage2.Controls.Add(Me.Consultar)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -261,11 +262,12 @@ Partial Class Personal
         '
         Me.bus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bus.FormattingEnabled = True
-        Me.bus.Items.AddRange(New Object() {"Cédula", "Código", "Nombre", "Asignatura"})
+        Me.bus.Items.AddRange(New Object() {"Cédula", "Nombre", "Cargo"})
         Me.bus.Location = New System.Drawing.Point(115, 50)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(121, 24)
+        Me.bus.Size = New System.Drawing.Size(137, 24)
         Me.bus.TabIndex = 1
+        Me.bus.Text = "Seleccione opción"
         '
         'buscar
         '
@@ -285,26 +287,27 @@ Partial Class Personal
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Buscar por:"
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 108)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(577, 143)
-        Me.DataGridView1.TabIndex = 10
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Location = New System.Drawing.Point(27, 108)
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.Size = New System.Drawing.Size(559, 143)
+        Me.TablaDgv.TabIndex = 10
         '
-        'Button1
+        'Consultar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(239, 294)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 47)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "CONSULTAR"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Consultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Consultar.Image = CType(resources.GetObject("Consultar.Image"), System.Drawing.Image)
+        Me.Consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Consultar.Location = New System.Drawing.Point(225, 283)
+        Me.Consultar.Name = "Consultar"
+        Me.Consultar.Size = New System.Drawing.Size(143, 47)
+        Me.Consultar.TabIndex = 3
+        Me.Consultar.Text = "CONSULTAR"
+        Me.Consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Consultar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -324,6 +327,16 @@ Partial Class Personal
         Me.Button2.TabIndex = 25
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(506, 58)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(34, 16)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "user"
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -341,16 +354,6 @@ Partial Class Personal
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(39, 39)
         Me.Label13.TabIndex = 26
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(506, 58)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(34, 16)
-        Me.Label11.TabIndex = 27
-        Me.Label11.Text = "user"
         '
         'Personal
         '
@@ -371,7 +374,7 @@ Partial Class Personal
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -395,15 +398,15 @@ Partial Class Personal
     Friend WithEvents Label2 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TablaDgv As DataGridView
+    Friend WithEvents Consultar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents buscar As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents bus As ComboBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents fnPer As DateTimePicker
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class

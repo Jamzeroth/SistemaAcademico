@@ -89,7 +89,7 @@
     Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
         BDcadena = "SELECT codigo_pro FROM sisaca.profesor;"
         Dim cod As Integer = AsignarId("codigo_pro")
-        BDcadena = "INSERT INTO `sisaca`.`profesor` (`codigo_pro`, `Nombre`, `Cédula`, `F. Nacimiento`, `Dirección`, `Teléfono`, `Email`, `Título`, `Sueldo`,`Observaciones`,`Estado`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nompro.Text + "', '" + Cipro.Text + "', '" + CStr(fnPro.Text) + "', '" + dirPro.Text + "', '" + telPro.Text + "', '" + emailPro.Text + "', '" + titPro.Text + "', '" + CStr(sueldo.Text) + "','""','1','0');"
+        BDcadena = "INSERT INTO `sisaca`.`profesor` (`codigo_pro`, `Nombre`, `Cédula`, `F. Nacimiento`, `Dirección`, `Teléfono`, `Email`, `Título`, `Sueldo`,`estado`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nompro.Text + "', '" + Cipro.Text + "', '" + CStr(fnPro.Text) + "', '" + dirPro.Text + "', '" + telPro.Text + "', '" + emailPro.Text + "', '" + titPro.Text + "', '" + CStr(sueldo.Text) + "','1','0');"
         Almacenar_Datos()
         Limpiar()
     End Sub
