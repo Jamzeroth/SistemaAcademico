@@ -65,7 +65,7 @@ Partial Class Estudiante
         Me.TabControl1.Location = New System.Drawing.Point(20, 72)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(634, 351)
+        Me.TabControl1.Size = New System.Drawing.Size(489, 351)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -256,7 +256,7 @@ Partial Class Estudiante
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(626, 325)
+        Me.TabPage2.Size = New System.Drawing.Size(481, 325)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CONSULTAR"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -264,7 +264,7 @@ Partial Class Estudiante
         'buscar
         '
         Me.buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buscar.Location = New System.Drawing.Point(335, 48)
+        Me.buscar.Location = New System.Drawing.Point(257, 49)
         Me.buscar.Name = "buscar"
         Me.buscar.Size = New System.Drawing.Size(162, 22)
         Me.buscar.TabIndex = 2
@@ -273,7 +273,7 @@ Partial Class Estudiante
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(58, 54)
+        Me.Label11.Location = New System.Drawing.Point(19, 52)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(76, 16)
         Me.Label11.TabIndex = 17
@@ -284,7 +284,7 @@ Partial Class Estudiante
         Me.bus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bus.FormattingEnabled = True
         Me.bus.Items.AddRange(New Object() {"Cédula", "Nombre", "Especialidad", "Asignatura"})
-        Me.bus.Location = New System.Drawing.Point(155, 48)
+        Me.bus.Location = New System.Drawing.Point(101, 49)
         Me.bus.Name = "bus"
         Me.bus.Size = New System.Drawing.Size(135, 24)
         Me.bus.TabIndex = 1
@@ -294,9 +294,9 @@ Partial Class Estudiante
         '
         Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TablaDgv.Location = New System.Drawing.Point(26, 95)
+        Me.TablaDgv.Location = New System.Drawing.Point(46, 96)
         Me.TablaDgv.Name = "TablaDgv"
-        Me.TablaDgv.Size = New System.Drawing.Size(577, 143)
+        Me.TablaDgv.Size = New System.Drawing.Size(373, 143)
         Me.TablaDgv.TabIndex = 10
         '
         'ConsultarBtn
@@ -304,7 +304,7 @@ Partial Class Estudiante
         Me.ConsultarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultarBtn.Image = CType(resources.GetObject("ConsultarBtn.Image"), System.Drawing.Image)
         Me.ConsultarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ConsultarBtn.Location = New System.Drawing.Point(235, 259)
+        Me.ConsultarBtn.Location = New System.Drawing.Point(159, 262)
         Me.ConsultarBtn.Name = "ConsultarBtn"
         Me.ConsultarBtn.Size = New System.Drawing.Size(139, 48)
         Me.ConsultarBtn.TabIndex = 3
@@ -334,7 +334,7 @@ Partial Class Estudiante
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(547, 52)
+        Me.Label12.Location = New System.Drawing.Point(407, 55)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(34, 16)
         Me.Label12.TabIndex = 24
@@ -344,7 +344,7 @@ Partial Class Estudiante
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(559, 15)
+        Me.Label10.Location = New System.Drawing.Point(419, 18)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(103, 16)
         Me.Label10.TabIndex = 21
@@ -353,7 +353,7 @@ Partial Class Estudiante
         'Label14
         '
         Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
-        Me.Label14.Location = New System.Drawing.Point(514, 6)
+        Me.Label14.Location = New System.Drawing.Point(374, 9)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(39, 39)
         Me.Label14.TabIndex = 23
@@ -362,7 +362,7 @@ Partial Class Estudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(674, 496)
+        Me.ClientSize = New System.Drawing.Size(526, 497)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label10)

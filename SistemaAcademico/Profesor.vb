@@ -109,9 +109,9 @@
         If (bus.Text <> "Seleccione opción") Then
             Select Case bus.Text
                 Case "Asignatura"
-                    BDcadena = "SELECT sisaca.estudiante.Nombre FROM sisaca.nota inner join sisaca.asignatura on sisaca.nota.asignatura_codigo_asi=sisaca.asignatura.codigo_asi inner join sisaca.estudiante on sisaca.nota.estudiante_codigo_est=sisaca.estudiante.codigo_est where sisaca.asignatura.Nombre='" + buscar.Text + "';"
+                    BDcadena = "SELECT sisaca.profesor.Nombre, sisaca.profesor.Cédula FROM sisaca.nota inner join sisaca.asignatura on sisaca.nota.asignatura_codigo_asi=sisaca.asignatura.codigo_asi inner join sisaca.profesor on sisaca.nota.profesor_codigo_pro=sisaca.profesor.codigo_pro where sisaca.asignatura.Nombre='" + buscar.Text + "';"
                 Case Else
-                    BDcadena = "SELECT " + bus.Text + " FROM sisaca.estudiante WHERE " + bus.Text + "='" + buscar.Text + "';"
+                    BDcadena = "SELECT sisaca.profesor.Nombre, sisaca.profesor.Cédula FROM sisaca.profesor WHERE " + bus.Text + "='" + buscar.Text + "';"
             End Select
         Else
             MsgBox("Seleccione un método de búsqueda")
