@@ -45,7 +45,7 @@ Partial Class Aula
         Me.bus = New System.Windows.Forms.ComboBox()
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -54,7 +54,7 @@ Partial Class Aula
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -247,7 +247,7 @@ Partial Class Aula
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.Label11)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.TablaDgv)
         Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -283,13 +283,14 @@ Partial Class Aula
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Buscar por:"
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(27, 108)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(577, 143)
-        Me.DataGridView1.TabIndex = 10
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Location = New System.Drawing.Point(27, 108)
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.Size = New System.Drawing.Size(577, 143)
+        Me.TablaDgv.TabIndex = 10
         '
         'Button1
         '
@@ -360,7 +361,7 @@ Partial Class Aula
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -370,7 +371,7 @@ Partial Class Aula
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label11 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TablaDgv As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents buscar As TextBox

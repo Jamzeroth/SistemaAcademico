@@ -73,6 +73,7 @@
             MsgBox("Sólo Letras", MsgBoxStyle.Information)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
 
     End Sub
@@ -85,5 +86,22 @@
         dimAu.Text = ""
         mesasAu.Text = ""
         siAu.Text = ""
+=======
+
+    Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
+        BDcadena = "SELECT codigo_aula FROM sisaca.aula;"
+        Dim cod As Integer = AsignarId("codigo_aula")
+        BDcadena = "INSERT INTO `sisaca`.`aula` (`codigo_aula`, `Nombre`, `Bloque`, `Piso`, `Dimensiones`, `Capacidad`, `N. de Mesas`, `N. de Sillas`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nomAu.Text + "', '" + bloAu.Text + "', '" + CStr(pisoAu.Text) + "', '" + CStr(dimAu.Text) + "', '" + CStr(Caula.Text) + "', '" + CStr(mesasAu.Text) + "', '" + CStr(siAu.Text) + "', '1');"
+        Almacenar_Datos()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If (bus.Text <> "Seleccione opción") Then
+            BDcadena = "SELECT sisaca.aula.Nombre, sisaca.aula.Bloque FROM sisaca.aula WHERE " + bus.Text + "='" + buscar.Text + "';"
+        Else
+            MsgBox("Seleccione un método de búsqueda")
+        End If
+        TablaDgv.DataSource = ObtenerTabla()
+>>>>>>> origin/master
     End Sub
 End Class
