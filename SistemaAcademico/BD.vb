@@ -73,6 +73,37 @@ Module BD
             MsgBox(ex.Message)
         End Try
     End Function
+    Public Function LLenarComboBoxAsig(ByVal cb As ComboBox)
+        Dim enunciado As MySqlCommand
+        Dim respuesta As MySqlDataReader
+        Try
+            enunciado = New MySqlCommand("SELECT Nombre FROM sisaca.asignatura", BDconexion)
+            respuesta = enunciado.ExecuteReader
+            While respuesta.Read
+                'cb.Text = (respuesta.Item("Nombre"))
+                cb.Items.Add(respuesta.Item("Nombre"))
+            End While
+            respuesta.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Function
+    Public Function LLenarComboBoxEst(ByVal cb As ComboBox)
+        Dim enunciado As MySqlCommand
+        Dim respuesta As MySqlDataReader
+        Try
+            enunciado = New MySqlCommand("select sisaca.estudiante.Nombre from sisaca.nota inner join sisaca.asignatura on sisaca.nota.asignatura_codigo_asi=sisaca.asignatura.codigo_asi inner join sisaca.estudiante where sisaca.nota.estudiante_codigo_est=sisaca.estudiante.codigo_est", BDconexion)
+            respuesta = enunciado.ExecuteReader
+            While respuesta.Read
+                'cb.Text = (respuesta.Item("Nombre"))
+                cb.Items.Add(respuesta.Item("Nombre"))
+            End While
+            respuesta.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Function
 
 
 End Module

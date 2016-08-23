@@ -29,13 +29,14 @@ Partial Class uno
         Me.AulasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaboratoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.contraseña = New System.Windows.Forms.TextBox()
         Me.user = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -81,7 +82,8 @@ Partial Class uno
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.contraseña)
         Me.Panel2.Controls.Add(Me.user)
@@ -92,6 +94,16 @@ Partial Class uno
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(290, 286)
         Me.Panel2.TabIndex = 8
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Administrador", "Profesor", "Estudiante"})
+        Me.ComboBox1.Location = New System.Drawing.Point(99, 94)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 12
+        Me.ComboBox1.Text = "Seleccione Tipo"
         '
         'Button1
         '
@@ -104,7 +116,7 @@ Partial Class uno
         '
         'contraseña
         '
-        Me.contraseña.Location = New System.Drawing.Point(99, 135)
+        Me.contraseña.Location = New System.Drawing.Point(99, 161)
         Me.contraseña.Name = "contraseña"
         Me.contraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.contraseña.Size = New System.Drawing.Size(100, 20)
@@ -112,7 +124,7 @@ Partial Class uno
         '
         'user
         '
-        Me.user.Location = New System.Drawing.Point(99, 100)
+        Me.user.Location = New System.Drawing.Point(99, 130)
         Me.user.Name = "user"
         Me.user.Size = New System.Drawing.Size(100, 20)
         Me.user.TabIndex = 9
@@ -120,7 +132,7 @@ Partial Class uno
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 138)
+        Me.Label3.Location = New System.Drawing.Point(32, 162)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 13)
         Me.Label3.TabIndex = 8
@@ -129,7 +141,7 @@ Partial Class uno
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(50, 107)
+        Me.Label2.Location = New System.Drawing.Point(50, 130)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 7
@@ -144,12 +156,14 @@ Partial Class uno
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Ingrese su usuario y Contraseña:"
         '
-        'TextBox1
+        'Label4
         '
-        Me.TextBox1.Location = New System.Drawing.Point(168, 231)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 12
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 102)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 13)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Ingresar como:"
         '
         'uno
         '
@@ -184,5 +198,6 @@ Partial Class uno
     Friend WithEvents DelColegioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AulasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LaboratoriosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label4 As Label
 End Class
