@@ -25,8 +25,8 @@ Partial Class ConsultarNotas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultarNotas))
         Me.bus = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        Me.Consultar = New System.Windows.Forms.Button()
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,7 +34,7 @@ Partial Class ConsultarNotas
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bus
@@ -44,8 +44,9 @@ Partial Class ConsultarNotas
         Me.bus.Items.AddRange(New Object() {"Todas", "Asignatura"})
         Me.bus.Location = New System.Drawing.Point(102, 109)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(121, 24)
+        Me.bus.Size = New System.Drawing.Size(140, 24)
         Me.bus.TabIndex = 0
+        Me.bus.Text = "Seleccione opción"
         '
         'Label1
         '
@@ -57,26 +58,27 @@ Partial Class ConsultarNotas
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Buscar:"
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 158)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(494, 139)
-        Me.DataGridView1.TabIndex = 2
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Location = New System.Drawing.Point(29, 158)
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.Size = New System.Drawing.Size(494, 139)
+        Me.TablaDgv.TabIndex = 2
         '
-        'Button1
+        'Consultar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(216, 316)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(140, 46)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "CONSULTAR"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Consultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Consultar.Image = CType(resources.GetObject("Consultar.Image"), System.Drawing.Image)
+        Me.Consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Consultar.Location = New System.Drawing.Point(216, 316)
+        Me.Consultar.Name = "Consultar"
+        Me.Consultar.Size = New System.Drawing.Size(140, 46)
+        Me.Consultar.TabIndex = 3
+        Me.Consultar.Text = "CONSULTAR"
+        Me.Consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Consultar.UseVisualStyleBackColor = True
         '
         'buscar
         '
@@ -155,14 +157,14 @@ Partial Class ConsultarNotas
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.buscar)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Consultar)
+        Me.Controls.Add(Me.TablaDgv)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.bus)
         Me.Name = "ConsultarNotas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar Notas"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -170,8 +172,8 @@ Partial Class ConsultarNotas
 
     Friend WithEvents bus As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TablaDgv As DataGridView
+    Friend WithEvents Consultar As Button
     Friend WithEvents buscar As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

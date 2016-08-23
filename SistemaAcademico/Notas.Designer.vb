@@ -193,6 +193,7 @@ Partial Class Notas
         Me.est.Name = "est"
         Me.est.Size = New System.Drawing.Size(258, 24)
         Me.est.TabIndex = 3
+        Me.est.Text = "Seleccione Estudiante"
         '
         'asig
         '
@@ -200,8 +201,9 @@ Partial Class Notas
         Me.asig.FormattingEnabled = True
         Me.asig.Location = New System.Drawing.Point(150, 65)
         Me.asig.Name = "asig"
-        Me.asig.Size = New System.Drawing.Size(143, 24)
+        Me.asig.Size = New System.Drawing.Size(167, 24)
         Me.asig.TabIndex = 1
+        Me.asig.Text = "Seleccione asignatura"
         '
         'Label5
         '

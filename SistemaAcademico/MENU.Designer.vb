@@ -35,6 +35,7 @@ Partial Class uno
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class uno
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.contraseña)
         Me.Panel2.Controls.Add(Me.user)
@@ -142,6 +144,13 @@ Partial Class uno
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Ingrese su usuario y Contraseña:"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(168, 231)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 12
+        '
         'uno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -175,4 +184,5 @@ Partial Class uno
     Friend WithEvents DelColegioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AulasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LaboratoriosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TextBox1 As TextBox
 End Class
