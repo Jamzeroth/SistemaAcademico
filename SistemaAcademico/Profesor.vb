@@ -118,4 +118,36 @@
         End If
         TablaDgv.DataSource = ObtenerTabla()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim y As Integer = CInt(TablaDgv.SelectedCells(0).RowIndex) 'filas
+        Dim x As Integer = CInt(TablaDgv.SelectedCells(0).ColumnIndex) 'columnas
+        Dim atributo As String = ""
+        Select Case (x)
+            Case 0
+                atributo = "Nombre"
+            Case 1
+                atributo = "Dirección"
+            Case 2
+                atributo = "Teléfono"
+            Case 3
+                atributo = "Email"
+            Case 4
+                atributo = "Título"
+            Case 5
+                atributo = "Sueldo"
+            Case 6
+                atributo = "estado"
+        End Select
+        Dim nuevo As String = InputBox("Ingrese un nuevo dato para: " + atributo, "Modificar", CStr(TablaDgv.SelectedCells(0).Value))
+        BDcadena = "UPDATE `sisaca`.`profesor` SET `" + atributo + "`='" + nuevo + "' WHERE `codigo_pro`='" + CStr(y) + "';"
+        Actualizar_Datos()
+        MsgBox("Cambios Realizados con Éxito", MsgBoxStyle.Information)
+    End Sub
+
+    Private Sub Profesor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Limpiar()
+        BDcadena = "select profesor.Nombre,profesor.Cédula,profesor.Dirección,profesor.Teléfono,profesor.Email,profesor.Título,profesor.Sueldo,profesor.estado from sisaca.profesor;"
+        TablaDgv.DataSource = ObtenerTabla()
+    End Sub
 End Class

@@ -102,7 +102,7 @@
     Private Sub guardar_Click(sender As Object, e As EventArgs) Handles guardar.Click
         BDcadena = "SELECT codigo_aula FROM sisaca.aula;"
         Dim cod As Integer = AsignarId("codigo_aula")
-        BDcadena = "INSERT INTO `sisaca`.`aula` (`codigo_aula`, `Nombre`, `Bloque`, `Piso`, `Dimensiones`, `Capacidad`, `N. de Mesas`, `N. de Sillas`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nomAu.Text + "', '" + bloAu.Text + "', '" + CStr(pisoAu.Text) + "', '" + dimAu.Text + "', '" + CStr(Caula.Text) + "', '" + CStr(mesasAu.Text) + "', '" + CStr(siAu.Text) + "', '0');"
+        BDcadena = "INSERT INTO `sisaca`.`aula` (`codigo_aula`, `Nombre`, `Bloque`, `Piso`, `Dimensiones`, `Capacidad`, `Mesas`, `Sillas`,`colegio_codigo_col`) VALUES ('" + CStr(cod) + "', '" + nomAu.Text + "', '" + bloAu.Text + "', '" + CStr(pisoAu.Text) + "', '" + dimAu.Text + "', '" + CStr(Caula.Text) + "', '" + CStr(mesasAu.Text) + "', '" + CStr(siAu.Text) + "', '0');"
         Almacenar_Datos()
         Limpiar()
     End Sub
@@ -116,4 +116,35 @@
         TablaDgv.DataSource = ObtenerTabla()
     End Sub
 
+    Private Sub Aula_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Limpiar()
+        BDcadena = "select aula.Nombre,aula.Bloque,aula.Piso,aula.Dimensiones,aula.Capacidad,aula.Mesas,aula.Sillas from sisaca.aula;"
+        TablaDgv.DataSource = ObtenerTabla()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim y As Integer = CInt(TablaDgv.SelectedCells(0).RowIndex) 'filas
+        Dim x As Integer = CInt(TablaDgv.SelectedCells(0).ColumnIndex) 'columnas
+        Dim atributo As String = ""
+        Select Case (x)
+            Case 0
+                atributo = "Nombre"
+            Case 1
+                atributo = "Bloque"
+            Case 2
+                atributo = "Piso"
+            Case 3
+                atributo = "Dimensiones"
+            Case 4
+                atributo = "Capacidad"
+            Case 5
+                atributo = "Mesas"
+            Case 6
+                atributo = "Sillas"
+        End Select
+        Dim nuevo As String = InputBox("Ingrese un nuevo dato para: " + atributo, "Modificar", CStr(TablaDgv.SelectedCells(0).Value))
+        BDcadena = "UPDATE `sisaca`.`aula` SET `" + atributo + "`='" + nuevo + "' WHERE `codigo_aula`='" + CStr(y) + "';"
+        Actualizar_Datos()
+        MsgBox("Cambios Realizados con Éxito", MsgBoxStyle.Information)
+    End Sub
 End Class

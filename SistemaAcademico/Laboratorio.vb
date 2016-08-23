@@ -103,4 +103,36 @@
         End If
         TablaDgv.DataSource = ObtenerTabla()
     End Sub
+
+    Private Sub Laboratorio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Limpiar()
+        BDcadena = "select laboratorio.Nombre,laboratorio.Bloque,laboratorio.Piso,laboratorio.Dimensiones,laboratorio.Capacidad,laboratorio.Mesas,laboratorio.Sillas from sisaca.laboratorio;"
+        TablaDgv.DataSource = ObtenerTabla()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim y As Integer = CInt(TablaDgv.SelectedCells(0).RowIndex) 'filas
+        Dim x As Integer = CInt(TablaDgv.SelectedCells(0).ColumnIndex) 'columnas
+        Dim atributo As String = ""
+        Select Case (x)
+            Case 0
+                atributo = "Nombre"
+            Case 1
+                atributo = "Bloque"
+            Case 2
+                atributo = "Piso"
+            Case 3
+                atributo = "Dimensiones"
+            Case 4
+                atributo = "Capacidad"
+            Case 5
+                atributo = "Tipo"
+            Case 6
+                atributo = "Maquinas"
+        End Select
+        Dim nuevo As String = InputBox("Ingrese un nuevo dato para: " + atributo, "Modificar", CStr(TablaDgv.SelectedCells(0).Value))
+        BDcadena = "UPDATE `sisaca`.`laboatorio` SET `" + atributo + "`='" + nuevo + "' WHERE `codigo_laboratorio`='" + CStr(y) + "';"
+        Actualizar_Datos()
+        MsgBox("Cambios Realizados con Éxito", MsgBoxStyle.Information)
+    End Sub
 End Class

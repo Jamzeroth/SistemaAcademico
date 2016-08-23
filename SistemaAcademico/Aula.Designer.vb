@@ -51,6 +51,7 @@ Partial Class Aula
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -64,7 +65,7 @@ Partial Class Aula
         Me.TabControl1.Location = New System.Drawing.Point(12, 71)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(633, 335)
+        Me.TabControl1.Size = New System.Drawing.Size(633, 369)
         Me.TabControl1.TabIndex = 6
         '
         'TabPage1
@@ -244,6 +245,7 @@ Partial Class Aula
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.Label11)
@@ -253,7 +255,7 @@ Partial Class Aula
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(625, 309)
+        Me.TabPage2.Size = New System.Drawing.Size(625, 343)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CONSULTAR"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -319,7 +321,7 @@ Partial Class Aula
         '
         Me.Button4.BackColor = System.Drawing.Color.White
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(16, 412)
+        Me.Button4.Location = New System.Drawing.Point(16, 446)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(61, 54)
         Me.Button4.TabIndex = 20
@@ -344,11 +346,24 @@ Partial Class Aula
         Me.Label14.TabIndex = 21
         Me.Label14.Text = "Cerrar Sesión"
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(498, 289)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 48)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "MODIFICAR"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Aula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(660, 470)
+        Me.ClientSize = New System.Drawing.Size(660, 512)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
@@ -396,4 +411,5 @@ Partial Class Aula
     Friend WithEvents Button4 As Button
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents Button2 As Button
 End Class

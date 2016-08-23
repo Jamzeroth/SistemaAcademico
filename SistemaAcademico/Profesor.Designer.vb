@@ -54,6 +54,7 @@ Partial Class Profesor
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -76,7 +77,7 @@ Partial Class Profesor
         Me.TabControl1.Location = New System.Drawing.Point(12, 84)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(490, 389)
+        Me.TabControl1.Size = New System.Drawing.Size(634, 392)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -261,6 +262,7 @@ Partial Class Profesor
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.Label11)
@@ -269,7 +271,7 @@ Partial Class Profesor
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(482, 363)
+        Me.TabPage2.Size = New System.Drawing.Size(626, 366)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CONSULTAR"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -362,11 +364,24 @@ Partial Class Profesor
         Me.Label14.TabIndex = 27
         Me.Label14.Text = "user"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(499, 312)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(121, 48)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "MODIFICAR"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Profesor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(514, 544)
+        Me.ClientSize = New System.Drawing.Size(658, 553)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Button2)
@@ -418,4 +433,5 @@ Partial Class Profesor
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents fnPro As DateTimePicker
+    Friend WithEvents Button1 As Button
 End Class

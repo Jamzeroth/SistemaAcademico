@@ -52,6 +52,7 @@ Partial Class Personal
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -245,6 +246,7 @@ Partial Class Personal
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.Label9)
@@ -301,7 +303,7 @@ Partial Class Personal
         Me.Consultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Consultar.Image = CType(resources.GetObject("Consultar.Image"), System.Drawing.Image)
         Me.Consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Consultar.Location = New System.Drawing.Point(225, 283)
+        Me.Consultar.Location = New System.Drawing.Point(225, 270)
         Me.Consultar.Name = "Consultar"
         Me.Consultar.Size = New System.Drawing.Size(143, 47)
         Me.Consultar.TabIndex = 3
@@ -354,6 +356,19 @@ Partial Class Personal
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(39, 39)
         Me.Label13.TabIndex = 26
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(498, 293)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(121, 48)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "MODIFICAR"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Personal
         '
@@ -409,4 +424,5 @@ Partial Class Personal
     Friend WithEvents fnPer As DateTimePicker
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Button1 As Button
 End Class

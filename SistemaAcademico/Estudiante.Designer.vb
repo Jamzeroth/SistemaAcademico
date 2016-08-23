@@ -42,6 +42,7 @@ Partial Class Estudiante
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.buscar = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.bus = New System.Windows.Forms.ComboBox()
@@ -52,6 +53,7 @@ Partial Class Estudiante
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -65,11 +67,12 @@ Partial Class Estudiante
         Me.TabControl1.Location = New System.Drawing.Point(20, 72)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(489, 351)
+        Me.TabControl1.Size = New System.Drawing.Size(585, 408)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.fnEst)
         Me.TabPage1.Controls.Add(Me.GuardarBtn)
         Me.TabPage1.Controls.Add(Me.carrera)
@@ -89,7 +92,7 @@ Partial Class Estudiante
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(481, 325)
+        Me.TabPage1.Size = New System.Drawing.Size(577, 382)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "INGRESAR"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -107,7 +110,7 @@ Partial Class Estudiante
         Me.GuardarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GuardarBtn.Image = CType(resources.GetObject("GuardarBtn.Image"), System.Drawing.Image)
         Me.GuardarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.GuardarBtn.Location = New System.Drawing.Point(237, 265)
+        Me.GuardarBtn.Location = New System.Drawing.Point(213, 267)
         Me.GuardarBtn.Name = "GuardarBtn"
         Me.GuardarBtn.Size = New System.Drawing.Size(117, 44)
         Me.GuardarBtn.TabIndex = 8
@@ -248,6 +251,7 @@ Partial Class Estudiante
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.Label11)
         Me.TabPage2.Controls.Add(Me.bus)
@@ -256,10 +260,23 @@ Partial Class Estudiante
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(481, 325)
+        Me.TabPage2.Size = New System.Drawing.Size(577, 382)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CONSULTAR"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(439, 329)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 47)
+        Me.Button1.TabIndex = 57
+        Me.Button1.Text = "MODIFICAR"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'buscar
         '
@@ -294,9 +311,9 @@ Partial Class Estudiante
         '
         Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TablaDgv.Location = New System.Drawing.Point(46, 96)
+        Me.TablaDgv.Location = New System.Drawing.Point(22, 103)
         Me.TablaDgv.Name = "TablaDgv"
-        Me.TablaDgv.Size = New System.Drawing.Size(373, 143)
+        Me.TablaDgv.Size = New System.Drawing.Size(539, 143)
         Me.TablaDgv.TabIndex = 10
         '
         'ConsultarBtn
@@ -304,7 +321,7 @@ Partial Class Estudiante
         Me.ConsultarBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultarBtn.Image = CType(resources.GetObject("ConsultarBtn.Image"), System.Drawing.Image)
         Me.ConsultarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ConsultarBtn.Location = New System.Drawing.Point(159, 262)
+        Me.ConsultarBtn.Location = New System.Drawing.Point(198, 261)
         Me.ConsultarBtn.Name = "ConsultarBtn"
         Me.ConsultarBtn.Size = New System.Drawing.Size(139, 48)
         Me.ConsultarBtn.TabIndex = 3
@@ -324,7 +341,7 @@ Partial Class Estudiante
         'Button2
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(8, 438)
+        Me.Button2.Location = New System.Drawing.Point(12, 486)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 55)
         Me.Button2.TabIndex = 22
@@ -358,11 +375,20 @@ Partial Class Estudiante
         Me.Label14.Size = New System.Drawing.Size(39, 39)
         Me.Label14.TabIndex = 23
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(46, 330)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 56
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Estudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(526, 497)
+        Me.ClientSize = New System.Drawing.Size(637, 553)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label10)
@@ -412,4 +438,6 @@ Partial Class Estudiante
     Friend WithEvents Label10 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents fnEst As DateTimePicker
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
 End Class

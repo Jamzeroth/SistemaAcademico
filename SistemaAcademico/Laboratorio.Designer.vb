@@ -52,6 +52,7 @@ Partial Class Laboratorio
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class Laboratorio
         Me.TabControl1.Location = New System.Drawing.Point(13, 89)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(633, 335)
+        Me.TabControl1.Size = New System.Drawing.Size(633, 370)
         Me.TabControl1.TabIndex = 8
         '
         'TabPage1
@@ -257,6 +258,7 @@ Partial Class Laboratorio
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button3)
         Me.TabPage2.Controls.Add(Me.buscar)
         Me.TabPage2.Controls.Add(Me.bus)
         Me.TabPage2.Controls.Add(Me.Label11)
@@ -265,7 +267,7 @@ Partial Class Laboratorio
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(625, 309)
+        Me.TabPage2.Size = New System.Drawing.Size(625, 344)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "CONSULTAR"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -305,7 +307,7 @@ Partial Class Laboratorio
         Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TablaDgv.Location = New System.Drawing.Point(27, 108)
         Me.TablaDgv.Name = "TablaDgv"
-        Me.TablaDgv.Size = New System.Drawing.Size(577, 143)
+        Me.TablaDgv.Size = New System.Drawing.Size(577, 128)
         Me.TablaDgv.TabIndex = 10
         '
         'Button1
@@ -313,7 +315,7 @@ Partial Class Laboratorio
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(246, 257)
+        Me.Button1.Location = New System.Drawing.Point(215, 252)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 46)
         Me.Button1.TabIndex = 3
@@ -332,7 +334,7 @@ Partial Class Laboratorio
         'Button2
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(17, 430)
+        Me.Button2.Location = New System.Drawing.Point(13, 465)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 55)
         Me.Button2.TabIndex = 22
@@ -358,11 +360,24 @@ Partial Class Laboratorio
         Me.Label12.TabIndex = 24
         Me.Label12.Text = "user"
         '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(498, 290)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(121, 48)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "MODIFICAR"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Laboratorio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(658, 488)
+        Me.ClientSize = New System.Drawing.Size(658, 524)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button2)
@@ -412,4 +427,5 @@ Partial Class Laboratorio
     Friend WithEvents Button2 As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Button3 As Button
 End Class
