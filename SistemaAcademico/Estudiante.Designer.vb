@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Estudiante
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Estudiante
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Estudiante))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -53,7 +53,6 @@ Partial Class Estudiante
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -72,7 +71,6 @@ Partial Class Estudiante
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.fnEst)
         Me.TabPage1.Controls.Add(Me.GuardarBtn)
         Me.TabPage1.Controls.Add(Me.carrera)
@@ -375,15 +373,6 @@ Partial Class Estudiante
         Me.Label14.Size = New System.Drawing.Size(39, 39)
         Me.Label14.TabIndex = 23
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(46, 330)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 56
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Estudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -439,5 +428,4 @@ Partial Class Estudiante
     Friend WithEvents Label14 As Label
     Friend WithEvents fnEst As DateTimePicker
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
 End Class
